@@ -18,5 +18,6 @@ tell application front_app
 	
 	activate
 	
-	set bounds of window 1 to {_winX, _y, _winW, _height}
+	-- The window doesn't seem to size itself to the height we give, but instead to a size smaller by the height of its shadow.  The shadow doesn't seem to be included for the width though, so it's kind of weird.  To get around this we'll add some to the height.
+	set bounds of window 1 to {_winX, _y, _winW, _height + (_ScreenSize's shadow_height())}
 end tell

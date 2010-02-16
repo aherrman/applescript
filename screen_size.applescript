@@ -22,3 +22,7 @@ on display_bounds()
 	
 	{0, _menuHeight, _screenWidth, _screenHeight - _menuHeight}
 end display_bounds
+
+on shadow_height()
+	22
+end shadow_height
