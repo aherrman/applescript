@@ -3,8 +3,7 @@ on load_script(_scriptName)
 		set _myPath to container of (path to me) as text
 	end tell
 	
-	set _loadPath to (_myPath & _scriptName)
-	load script (alias _loadPath)
+	load script (alias (_myPath & _scriptName))
 end load_script
 
 set _ScreenSize to load_script("screen_size.scpt")
